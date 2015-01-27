@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html ng-app="gasSearch">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <meta property="fb:app_id" content="215046668549694"/>
+    <meta property="og:description" content="This USA TODAY Network investigative report about the dangers of aging, leak-prone natural gas pipes found that gas explosions killed at least 135 people and injured another 600 people over the last decade, and some local gas utilities operate a high concentration of aging pipes, despite years of warnings from federal safety regulators to replace them."/>
+    <meta property="og:image" content="http://www.gannett-cdn.com/experiments/usatoday/2014/gas-leaks/img/fb-post.jpg">
+    <meta property="og:url" content="http://www.gannett-cdn.com/experiments/usatoday/2014/gas-leaks/"/>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dangerous Gas Pipes"/>
+    <title>Dangerous Gas Pipes</title>
+    <link rel="stylesheet" href="http://usatoday30.usatoday.com/_common/_fonts/fonts.css" />
+    <link type="text/css" href="style/project.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="http://www.gannett-cdn.com/experiments/usatoday/_common/_scripts/jquery-1.11.0.min.js"></script>
+    
+    <script type="text/javascript" src="http://i.usatoday.net/_common/_scripts/mobile-detect.js"></script>
+    <script type="text/javascript" src="http://www.gannett-cdn.com/experiments/usatoday/_common/_scripts/modernizr.js"></script>
+    <script>
+    $(function(){
+      
+      if (jQuery.browser.mobile) {
+        document.location = "mobile.html";
+      }
+
+      
+      else if (Modernizr.touch && $(window).width() <= 1024) {
+        document.location = "mobile.html";
+      }
+
+ 
+    });
+    </script>
+
+    <script type="text/javascript" src="http://www.gannett-cdn.com/experiments/usatoday/_common/_scripts/jquery.mobile.custom.min.js"></script>
+    <script type="text/javascript" src="http://i.usatoday.net/_common/_scripts/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript" src="http://i.usatoday.net/_common/_scripts/jquery.ui.touch-punch.min.js"></script>
+    
+    <script type="text/javascript" src="http://www.gannett-cdn.com/experiments/usatoday/_common/_scripts/angular.min.js"></script>
+    <script type="text/javascript" src="http://www.gannett-cdn.com/experiments/usatoday/_common/_scripts/hammer.min.js"></script>
+
+    
+    <link rel="shortcut icon" href="http://www.gannett-cdn.com/sites/usatoday/images/favicon.png">
+
+    <script src='http://www.gannett-cdn.com/experiments/usatoday/_common/_maps/mapbox.js'></script>
+    <link href='http://www.gannett-cdn.com/experiments/usatoday/_common/_maps/mapbox.css' rel='stylesheet'/>
+
+
+    <script type="text/javascript" src="http://www.gannett-cdn.com/experiments/usatoday/_common/_scripts/d3.min.js"></script>
+    
+    <!-- START OMNITURE /// BE SURE TO UPDATE FOR THIS CODE FOR YOUR SPECIFIC PROJECT -->
+    <script>
+      if (window == window.top) {
+          window.utag_data = {
+              cst: 'Nation-Now/GasPipes',
+              hostname: 'www.usatoday.com',
+              partner_type: 'basic',
+              ssts: 'Life/Entertainment',
+              prop16: 'interactives',
+              contenttype: 'interactives'
+          };
+      }
+    </script>
+    <script src="//tealium.hs.llnwd.net/o43/utag/gci/usat/prod/utag.js"></script>
+    <!-- END OMNITURE -->
+    <script src="http://i.usatoday.net/_common/_scripts/analytics.js" type="text/javascript"></script>
+
+
+</head>
+
+<body>
+<!-- <iframe id="header" width="100%" height="39" frameborder="0" scrolling="no" src="http://www.usatoday.com/services/cobrand/header/"></iframe> -->
+  <div class="preloader"><img src="img/loader.gif" alt="Loading"></div>
+  <div class="wrap" ng-controller="SearchController as search" ng-click="isFormOpen = false">
+    <div class="menu-button" >
+      <img src="img/menu-icon.svg" id="open-menu"alt="" style="display:none">
+      <div class="social"> <a href="javascript: window.open('https://twitter.com/intent/tweet?url=http%3A%2F%2Fusat.ly%2f1yp3QX7​&text=Look%20out%20below:%20Danger%20lurks%20underground%20from%20aging%20gas%20pipes.&via=usatoday&hashtags=DangerousPipes', 'twitterwindow', 'height=450, width=550, top=200, left=200, toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');Analytics.click('Twitter share');void(0);"><img src="img/twitter.svg" alt="Share on Twitter" class="social-icon" border="0"></a> <a href="javascript: var sTop=window.screen.height/2-(218);var sLeft=window.screen.width/2-(313);window.open('https://www.facebook.com/dialog/feed?display=popup&app_id=215046668549694&link=http%3A%2F%2Fusat.ly%2f1yp3QX7​&picture=http://www.gannett-cdn.com/experiments/usatoday/2014/gas-leaks/img/fb-post.jpg&name=Look%20out%20below:&description=Danger%20lurks%20underground%20from%20aging%20gas%20pipes.&redirect_uri=http://usatoday30.usatoday.com/_common/_dialogs/fb-share-done.html','sharer','toolbar=0,status=0,width=580,height=400,top='+sTop+',left='+sLeft);Analytics.click('Facebook share');void(0);"><img src="img/facebook.svg" alt="Share on Facebook" class="social-icon" border="0"></a> <a href="mailto:?body=Danger%20lurks%20underground%20from%20aging%20gas%20pipes. %0d%0dhttp%3A%2F%2Fusat.ly%2f1yp3QX7​&subject=Look%20out%20below" onclick="var sharer = window.open('http://usatoday30.usatoday.com/_common/_dialogs/fb-share-done.html','sharer','toolbar=0,status=0,width=580,height=400,top=200,left=200');setTimeout(function() {sharer.close();}, 500);void(0);" target="sharer"><img src="img/email.svg" alt="Share on Email" class="social-icon" border="0"></a> </div>
+    </div>
+    <article id="intro">
+      <div class="intro-unmute"><img src="img/unmute.png" alt="unmute-video"> <img src="img/mute.png" alt="unmute-video" class="no-show">Click to start audio</div>
+      <audio  id="intro-audio" >
+          <source src="audio/beat1.mp3" type="audio/mpeg">
+          <source src="audio/beat1.ogg" type="audio/ogg">
+        </audio>
+        <div class="audio-player intro-audio-player">
+          <div class="audio-inner not-playing">
+            <div class="audio-credit-inner" style="display: none;">Chapter 1</div>
+            <div class="audio-back audio-button" style="display: none;"></div>
+            <div class="play-pause play audio-button" style="display: none;"></div>
+            <div class="audio-forward audio-button" style="display: none;"></div>
+            <div class="audio-box">
+              <div class="audio-bar"> </div>
+              <div class="audio-dot-container">
+                <div class="audio-dot"></div>
+              </div>
+            </div>
+            <div class="audio-time-text" style="display: none">0:00/0:00</div>
+          </div>
+        </div> <!--End of audio-player -->
+      <div class="intro-content">
+				<div class="header-wrap">
+        <h1>There is a destructive gas leak <br><span class="highlight">every 2 days</span> in the USA</h1>
+				</div>
+        <div class="intro-input-wrap">
+        <h3>Enter your ZIP code to see leaks near you.</h3>
+        <form class="intro-zip-form" enctype="application/json" action=''>
+          <input type="text" class="zip-input" id="zip-input" >
+          <input type="submit" class="button intro-enter" id="intro-submit" value="Enter">
+          <div class="intro-popover">Please enter a valid zip code<div class="arrow-right"></div></div>
+        </form>
+        </div>
+      </div>
+
+    <video id="introvid" class="bgvideo" loop poster="img/intro-still.jpg">
+      <source src="video/intro_video_treated.mp4" type="video/mp4" />
+      <source src="video/intro_video_treated.ogv" type="video/ogg" />
+    </video>
+    
+    </article>
+
+
+    <div id="map"></div>
+    <div id="map-ui">
+
+      <div class="map-key">
+        <h3 class="key-title">Key</h3>
+        <div class="group">
+          <div class="key-item"><div class="key-icon deaths"></div>Deaths</div>
+          <div class="key-item"><div class="key-icon injuries"></div>Injuries</div>
+          <div class="key-item"><div class="key-icon incidents"></div>Incidents</div>
+        </div>
+        <h4 class="key-footnote">Click markers at any time to get more info.</h4>
+      </div>
+      
+      
+      <div class="panel">
+        <div class="panel-inner-wrap">
+          <div class="branding"><img src="img/usat-logo.svg" alt="USA TODAY"></div>
+        
+          <div class="chapter-nav-wrapper" id="chapter-nav-wrapper">
+            <ol class="chapter-nav-list">
+              <li class="chapter-dot" data-chapter="1"></li>
+              <li class="chapter-dot active" data-chapter="2"></li>
+              <li class="chapter-dot" data-chapter="4"></li>
+              <li class="chapter-dot" data-chapter="5"></li>
+              <li class="chapter-dot" data-chapter="6"></li>
+              <li class="chapter-dot" data-chapter="7"></li>
+              <li class="chapter-dot" data-chapter="8"></li>
+              <li class="chapter-dot" data-chapter="9"></li>
+            </ol>
+          </div>
+        
+          <h3 class="chapter-header" id="chapter-header"></h3>
+          <h2 class="description-header" id="description-header"></h2>
+        
+          <div class="panel-audio-wrap">
+            <audio  id="audio-source" >
+              <source src="audio/beat1.mp3" type="audio/mpeg">
+              <source src="audio/beat1.ogg" type="audio/ogg">
+            </audio>
+            <div class="audio-player">
+              <div class="audio-inner playing">
+                <div class="audio-credit-inner"></div>
+                <div class="audio-button js-audio-back" >
+                  <div class="audio-back"></div>
+                </div>
+              <div class="audio-button play js-audio-play-pause" >
+                <div class="play-pause play"></div>
+              </div>
+             <div class="audio-button js-audio-forward" >
+                <div class="audio-forward"></div>
+             </div>
+                <div class="audio-box">
+                  <div class="audio-bar"> </div>
+                  <div class="audio-dot-container">
+                    <div class="audio-dot"></div>
+                  </div>
+                </div>
+                <div class="audio-time-text">0:00/0:00</div>
+              </div>
+            </div>
+          </div><!--End audio-wrap-->
+          <div id="search_cont_end" class="pull-left"  >
+              <input type="text" class="form-control" id="end_company_search_box" placeholder="Search gas companies" ng-model="filterTerm"  ng-change="search.search()" ><div class="clear-button" ng-click ="search.clear()"><img src="img/close-icon.svg" alt=""></div>
+              <ul class="list-group" ng-show="isFormOpen" id="search_results_end" ng-focus="isFormOpen = True">
+                  <li class="list-group-item ng-cloak" ng-repeat="company in companies | filter: filterTerm: false" ng-click="search.endComanyFocus(company)">
+                      <h3 class="search-name">{{company.name}}</h3>
+                      <h4 class="search-detail">{{company.office_city}}, {{company.office_state}}</h4>
+                      <h4 class="search-detail">Operating in: {{company.state}}</h4>
+                  </li>
+              </ul>
+            </div>
+        
+            <div id="search_cont" class="pull-left" >
+              <input type="text" class="form-control" id="company_search_box" placeholder="Find your gas company" ng-model="filterTerm"  ng-change="search.search()">
+              <ul class="list-group" ng-show="isFormOpen" id="search_results" ng-focus="isFormOpen = True">
+                  <li class="list-group-item ng-cloak" ng-repeat="company in companies | filter: filterTerm: false" ng-click="search.setComanyFocus(company)">
+                      <h3 class="search-name">{{company.name}}</h3>
+                      <h4 class="search-detail">{{company.office_city}}, {{company.office_state}}</h4>
+                      <h4 class="search-detail">Operating in: {{company.state}}</h4>
+                  </li>
+              </ul>
+          </div>
+        
+          <div class="panel-data">
+            
+            
+            <div class="panel-info">
+              <h3 class="data-head" id="panel-head"></h3>
+              <h4 class="data-sub" id="panel-sub"></h4>
+              <p class="data-transmission-info" id="panel-extra-info" style="display:none;"></p>
+            </div>
+            
+            <div class="data-charts">
+                <div class="data-column" id="data-column1">
+                  <p class="data-decription">Percent of total bare-metal mains</p>
+                  <div class="compare-tag" data-id="1"></div>
+                  
+                </div>
+                <div class="data-column" id="data-column2">
+                  <p class="data-decription">Percent of pre 1970 mains</p>
+                  <div class="compare-tag" data-id="2"></div>
+                  
+                </div>
+                <div class="data-column" id="data-column3">
+                  <p class="data-decription">Percent of lost or unaccounted for gas</p>
+                  <div class="compare-tag" data-id="3"></div>
+                  
+                </div>
+                <div class="data-column" id="data-column4">
+                  <p class="data-decription">Hazardous Leaks per 1,000 miles of main</p>
+                  <div class="compare-tag" data-id="4"></div>
+              
+                </div>
+                <div class="data-popover" data-id="1">
+                  <div class="popover-close-button"></div>
+                  <h5 class="popover-title">Bare-metal mains</h5>
+                  <p>The percentage of gas mains made of older cast iron and bare steel. The federal government and independent safety advocates warn these materials are more prone to rust, corrosion and other failures. Cast iron is older and can be 50 to 100 or more years old. National average: 7%</p>
+                </div>
+                <div class="data-popover" data-id="2">
+                  <div class="popover-close-button"></div>
+                  <h5 class="popover-title">Pre 1970 mains</h5>
+                  <p>The percentage of gas mains, regardless of material, that the utility said were installed before 1970. The federal government requires utilities to track the age of its gas mains and says older mains need to be more carefully monitored. National average: 39%</p>
+                </div>
+                <div class="data-popover" data-id="3">
+                  <div class="popover-close-button"></div>
+                  <h5 class="popover-title">Lost or unaccounted for gas</h5>
+                  <p>Every year, utilities are asked to report the amount of gas that was "lost or unaccounted for" in their distribution system. The government and utilities concede some of this is because of leaks, but say it can also be issues with measurements, instrumentation and other factors. National average: 2.2%</p>
+                </div>
+                <div class="data-popover" data-id="4">
+                  <div class="popover-close-button"></div>
+                  <h5 class="popover-title">Hazardous leaks per 1,000 miles of main</h5>
+                  <p>Gas utilities must report each year the number of leaks and hazardous leaks, the latter of which are leaks that posed a threat to people or property. This figure is the number of hazardous leaks from gas mains reported in 2013 per 1,000 miles of pipe. National average: 35 hazardous leaks per 1,000 miles.</p>
+                </div>
+              </div>
+            <div class="button data-tour-start" id="begin-tour-button">Begin Audio Tour</div>
+          </div>
+          <div >
+            
+            <div class="button continue-button beat3" style="display: none;">Continue</div>
+          </div>
+      </div>
+
+      </div>      
+      <div class="map-info-box js-no-incidents-box" style="display: none;">No incidents reported for this company</div>
+    </div>
+    <div class="video-container" style="display: none;"> 
+    <div class="video-close-button"><img src="img/close-icon.svg" alt=""></div>
+    <!-- Video Controls -->
+        <div id="video-controls" class="">
+          <div id="play-pause" class="play"></div>
+          <div id="seek-bar">
+            <div id="video-dot"></div>
+          </div>
+        </div> 
+      <video id="explainer-video" class="bgvideo" poster="img/pipes-still.jpg" >
+        <source src="video/pipes-animation.mp4" type="video/mp4" />
+        <source src="video/pipes-animation.ogv" type="video/ogg" />
+      </video>
+
+    </div>
+    
+  </div>
+  <div class="sidebar">
+    <div class="menu-button" id="close-menu"><img src="img/close-icon.svg" alt=""></div>
+    <ul class="nav-list">
+      <li class="nav-item active" data-chapter="1">Chapter 1 Overview</li>
+      <li class="nav-item" data-chapter="2">Chapter 2 Your state</li>
+      <li class="nav-item" data-chapter="4">Chapter 3 What's going on?</li>
+      <li class="nav-item" data-chapter="5">Chapter 4 Hot spots</li>
+      <li class="nav-item" data-chapter="6">Chapter 5 New York, NY</li>
+      <li class="nav-item" data-chapter="7">Chapter 6 Washington DC</li>
+      <li class="nav-item" data-chapter="8">Chapter 7 Pensacola, FL</li>
+      <li class="nav-item" data-chapter="9">Chapter 8 Explore</li>
+    </ul>
+    <h3 class="nav-header">About this project</h3>
+    <p>This USA TODAY Network investigative report about the dangers of aging, leak-prone natural gas pipes found that gas explosions killed at least 135 people and injured another 600 people over the last decade, and some local gas utilities operate a high concentration of aging pipes, despite years of warnings from federal safety regulators to replace them.</p>
+    <h3 class="nav-header">Credits</h3>
+    <p>Keith Carter, Jeff Dionise, Tory Hargro, John Kelly, Jerry Mosemak, Chad Palmer, Mitchell Thorson, USA TODAY Network</p>
+    <p>Images: Getty Images</p>
+    <p>All Rights Reserved</p>
+    </div>
+    
+    
+    <script src="js/app.min.js"></script>
+</body>
+</html>

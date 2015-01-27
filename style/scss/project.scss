@@ -1,0 +1,116 @@
+/************************
+
+Import components
+
+*************************/
+
+@import 'base';
+@import 'bits';
+@import 'buttons';
+
+
+article {
+  position: relative;
+}
+
+
+h1 {
+  font-family: "Futura Today Bold", Arial,sans-serif;
+  font-size: 3em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+html {
+  bottom: 0;
+  font-size: 100%;
+  font-weight: 400;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  @media (max-width: 1500px) {
+    font-size: 80%;
+  }
+}
+
+
+.wrap {
+  background: black;
+  bottom: 0;
+
+  height: 100%;
+  left: 0;
+  min-height: 100%;
+  min-width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transition: left 250ms ease;
+  z-index: 5;
+}
+
+
+
+
+#header{
+  position: absolute;
+  z-index: 100;
+}
+
+@import 'intro';
+@import 'video';
+@import 'map';
+@import 'chapter-nav-dots';
+
+.branding {
+  margin: 0 auto 1em auto;
+  width: 60%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.menu-button {
+  height: 50px;
+  position: absolute;
+  right: 20px;
+  top: 3em;
+  width: 50px;
+  z-index: 15;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.social {
+  box-shadow: $shadow-standard;
+  margin-top: 1em;
+  img {
+    display: block;
+    height: 50px;
+    margin: 0;
+    position: relative;
+    top: 0;
+    width: 50px;
+  }
+  a {
+    margin: 0;
+    position: relative;
+    top: 0;
+  }
+}
+
+@import 'charts';
+@import 'sidebar';
+@import 'map-key';
+@import 'preloader';
+@import 'popover';
+@import 'mobile';
+@import 'promo';

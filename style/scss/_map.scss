@@ -1,0 +1,112 @@
+/*******************************
+
+Map Styles
+
+*******************************/
+
+#map {
+  
+  height:100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  transition: top 1000ms ease;
+  z-index: 5;
+}
+
+#map-ui.active {
+  bottom: 0;
+  top: 0;
+  transition: all 1000ms ease;
+}
+
+#map.active {
+  bottom: 0;
+  left: 0;
+  right: 0%;
+  top: 0%;
+  transition: top 1000ms ease;
+
+}
+
+#map-ui {
+  bottom: -100%;
+  top: 100%;
+  position: absolute;
+   transition: all 1000ms ease;
+  width: 100%;
+}
+
+/**********************
+
+Override leaflet style
+
+***********************/
+
+.leaflet-top {
+  top: 39px !important;
+}
+
+@import 'panel';
+
+@import 'search';
+
+@import 'audiocontrols';
+
+.leaflet-marker-icon {
+  border-radius: 50%;
+  position: relative;
+  height: 25px;
+}
+
+.leaflet-marker-icon.marker-alt {
+  border-radius: 50%;
+
+  height: 15px;
+}
+
+.main-marker {
+  background: lighten($light-grey, 20);
+  border: solid 2px lighten($medium-grey, 20);
+}
+
+.injured-marker {
+  background: $blue;
+  border: solid 2px darken($blue, 20);
+ height: 20px !important;
+  z-index: 5;
+}
+
+.dead-marker {
+  background: black;
+  border: solid 2px ligthen(black, 20);
+  height: 20px !important;
+  z-index: 5;
+}
+
+
+.hotspot-marker {
+  background: $red;
+  margin-top: -50px;
+  height: 100px;
+  opacity: 0.5;
+  z-index: 15;
+}
+
+
+.map-info-box {
+  background-color: rgba(0, 0, 0, 0.30);
+  border-radius: 2em;
+  color: white;
+  font-family: "Futura Today Light", Arial,sans-serif;
+  left: 50%;
+  padding: 4em;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20em;
+  z-index: 10;
+}

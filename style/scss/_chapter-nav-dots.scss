@@ -1,0 +1,39 @@
+.chapter-nav-list {
+  
+  left: 50%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, 0);
+  // width: 12em;
+}
+
+.chapter-nav-wrapper {
+  height: 1.5em;
+  margin-bottom: 1em;
+  position: relative;
+}
+
+.chapter-dot {
+  background: lighten($light-grey, 30);
+  border-radius: 50%;
+  color: $light-grey;
+  cursor: pointer;
+  display: inline-block;
+  font-size: .8em;
+  height: 1.5em;
+  margin-right: 0.25em;
+  transition: all 250ms ease;
+  width: 1.5em;
+  text-align: center;
+  &.active, &:hover {
+    background: $blue;
+    color: white;
+    // height: 1.5em;
+    // transform: translate(0, .25em);
+    transition: all 250ms ease;
+    // width: 1.5em;
+  }
+}

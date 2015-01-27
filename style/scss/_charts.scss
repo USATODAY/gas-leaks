@@ -1,0 +1,46 @@
+.chart-percent-text {
+  fill: $blue;
+  font-family: "Futura Today Bold", Arial,sans-serif;
+  font-size: 1em;
+}
+
+.compare-tag {
+
+  bottom: 0;
+  color: white;
+  font-family: "Futura Today Light", Arial,sans-serif;
+  font-size: 0.8em;
+  margin: 0.5em auto 0 auto;
+  opacity: 1;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 250ms ease;
+  padding: 0.25em;
+  position: absolute;
+  width: 90%;
+  &.average{
+    background: $light-grey;
+    border: solid 1px $light-grey;
+    &:hover {
+      background: lighten($light-grey, 10);
+    }
+  }
+  &.above{
+    background: $red;
+    border: solid 1px $red;
+    &:hover {
+      background: lighten($red, 10);
+    }
+  }
+  &.below{
+    background: $green;
+    border: solid 1px $green;
+    &:hover {
+      background: lighten($green, 10);
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    transition: background 250ms ease;
+  }
+}

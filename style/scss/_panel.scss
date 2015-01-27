@@ -1,0 +1,184 @@
+.panel {
+  background-color: rgba(0, 0, 0, 0.3);
+  // border-top: solid 2px white;
+  box-shadow: $shadow-standard;
+  bottom: 0;
+  color: white;
+  font-family: "Futura Today", Arial,sans-serif;
+  
+  left: 0;
+  overflow: hidden;
+ 
+  padding: 2em 2em 6em 2em;
+  position: absolute;
+  top: 0;
+  transition: height 250ms ease;
+  width: 550px;
+  z-index: 6;
+
+  @media (max-width: 1500px) {
+    // max-height: 80%;
+    width: 400px;
+  }
+}
+
+
+.panel-inner-wrap {
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.data-sub {
+  display: none;
+  font-family: "Futura Today Light", Arial,sans-serif;
+}
+
+.data-head {
+  display: none;
+  font-family: "Futura Today", Arial,sans-serif;
+  font-size: 1.6em;
+  text-transform: uppercase;
+}
+
+.panel-audio-wrap {
+  bottom: 0;
+  // height: 30px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  
+}
+
+.panel-info {
+  display: inline-block;
+  // margin-left: 3em;
+}
+
+.data-icon {
+  margin-top: 0;
+  left: 2em;
+  position: absolute;
+  top: 1.5em;
+}
+
+.data-charts {
+  @extend .group;
+  margin-top: 1em;
+  opacity: 0;
+  position: relative;
+  top: 0px;
+  transition: opacity 500ms ease;
+  &.show {
+    opacity: 1;
+    top: 0;
+  }
+  svg {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.data-column {
+  display: inline-block;
+  float: left;
+  height: 11em;
+  position: relative;
+  width: 25%;
+  @media (max-width: 1500px) {
+    height: 12em;
+  }
+}
+
+.data-decription {
+  font-size: 0.8em;
+  margin: 0.5em 0 0 0;
+  position: absolute;
+  text-align: center;
+  top: 6.5em;
+}
+
+audio {
+  bottom: 0;
+  right: -550px;
+  position: absolute;
+  transition: right 500ms ease;
+  width: 550px;
+  &.active{
+    right: 0;
+    transition: right 500ms ease;
+  }
+}
+
+.panel-data {
+  display: block;
+  height: auto;
+  padding: 1em 0;
+  position: relative;
+  &.hidden {
+    display: none;
+  }
+}
+
+.data-tour-start {
+  background-color: $blue;
+  display: none;
+  margin-top: $spacing-standard;
+  width: 14em;
+  &:hover {
+    background-color: darken($blue, 10);
+  }
+}
+
+.tag {
+  background-color: rgba(250, 250, 250, 1);
+  border-radius: 15px;
+  color: $blue;
+  padding: .25em 0;
+  text-align: center;
+  width: 100%;
+}
+
+.metal-miles {
+  font-family: "Futura Today Bold", Arial,sans-serif;
+  font-size: 2em;
+  margin: 0 auto;
+  padding-top: 20%;
+  text-align: center;
+  width: 75%;
+  @media(max-width: $break-large){
+    // padding-top: 20%;
+  };
+}
+
+.button.continue-button {
+  background-color: $blue;
+  margin-top: 1em;
+  &:hover {
+    background-color: darken($blue, 15);
+  }
+}
+
+.select-new-button{
+  background-color: $light-grey;
+  &:hover {
+    background-color: darken($light-grey, 15);
+  }
+  width: 160px;
+}
+
+.description-header{
+  font-family: "Futura Today Bold", Arial,sans-serif;
+  font-size: 1.8em;
+  margin: .5em 0;
+  text-transform: uppercase;
+}
+
+.chapter-header {
+  font-family: "Futura Today Light", Arial,sans-serif;
+  font-size: 1.2em;
+}
+
+.data-transmission-info {
+  color: lighten($light-grey, 50);
+  font-size: 1.2em;
+}

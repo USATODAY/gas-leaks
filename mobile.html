@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="gasSearch" class="mobile">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+  <meta property="fb:app_id" content="215046668549694"/>
+  <meta property="og:description" content="Content"/>
+  <meta property="og:image" content="Image">
+  <meta property="og:url" content="URL"/>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Title"/>
+  <title>Dangerous Gas Pipes</title>
+  <script type="text/javascript" src="http://www.gannett-cdn.com/experiments/usatoday/_common/_scripts/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="http://www.gannett-cdn.com/experiments/usatoday/_common/_scripts/angular.min.js"></script>
+  <link rel="shortcut icon" href="http://www.gannett-cdn.com/sites/usatoday/images/favicon.png">
+  <script src="js/d3.min.js"></script>
+  <link rel="stylesheet" href="http://usatoday30.usatoday.com/_common/_fonts/fonts.css" />
+  <link type="text/css" href="style/project.css" rel="stylesheet"/>
+</head>
+<body>
+  <div class="preloader-mobile"><img src="img/loader-white.gif" alt="Loading"></div>
+  <div class="wrap mobile-wrap" ng-controller="SearchController as search" ng-click="isFormOpen = false">
+
+    <div class="mobile-back-bar"></div>
+    <h1 class="mobile-head">Look up your local gas company</h1>
+
+    <div id="search_cont" class="pull-left" >
+              <input type="text" class="form-control" id="company_search_box" placeholder="Enter your gas company here" ng-model="filterTerm"  ng-change="search.mobileSearch()" >
+              <!-- <div class="clear-button" ng-click ="search.clear()"><img src="img/close-icon.svg" alt=""></div> -->
+              <ul class="list-group" ng-show="isFormOpen" id="search_results" ng-focus="isFormOpen = True">
+                  <li class="list-group-item ng-cloak" ng-repeat="company in companies | filter: filterTerm: false" ng-click="search.setComanyFocus(company)">
+                      <h3 class="search-name">{{company.name}}</h3>
+                      <h4 class="search-detail">{{company.office_city}}, {{company.office_state}}</h4>
+                      <h4 class="search-detail">Operating in: {{company.state}}</h4>
+                  </li>
+              </ul>
+              <div class="mobile-company-info-box">Use the search box above to find your local gas company.</div>
+          </div>
+
+    <div class="panel-data">
+      
+      
+      <div class="panel-info">
+        <h3 class="data-head" id="panel-head"></h3>
+        <h4 class="data-sub" id="panel-sub"></h4>
+      </div>
+      
+      <div class="data-charts">
+          <div class="group">
+            <div class="data-column" id="data-column1">
+              <p class="data-decription">Percent of total bare-metal mains</p>
+              <div class="compare-tag" data-id="1"></div>
+              
+            </div>
+            <div class="data-column" id="data-column2">
+              <p class="data-decription">Percent of pre 1970 mains</p>
+              <div class="compare-tag" data-id="2"></div>
+              
+            </div>
+            <div class="data-column" id="data-column3">
+              <p class="data-decription">Percent of lost or unaccounted for gas</p>
+              <div class="compare-tag" data-id="3"></div>
+              
+            </div>
+          </div>
+          <div class="data-column" id="data-column4">
+            <p class="data-decription">Hazerdous Leaks per 1,000 miles of main</p>
+            <div class="compare-tag" data-id="4"></div>
+        
+          </div>
+          <div class="data-popover" data-id="1">
+            <div class="popover-close-button"></div>
+            <h5 class="popover-title">Bare-metal mains</h5>
+            <p>The percentage of gas mains made of older cast iron and bare steel. The federal government and independent safety advocates warn these materials are more prone to rust, corrosion and other failures. Cast iron is older and can be 50 to 100 or more years old. National average: 7%</p>
+          </div>
+          <div class="data-popover" data-id="2">
+            <div class="popover-close-button"></div>
+            <h5 class="popover-title">Pre 1970 mains</h5>
+            <p>The percentage of gas mains, regardless of material, that the utility said were installed before 1970. The federal government requires utilities to track the age of its gas mains and says older mains need to be more carefully monitored. National average: 39%</p>
+          </div>
+          <div class="data-popover" data-id="3">
+            <div class="popover-close-button"></div>
+            <h5 class="popover-title">Lost or unaccounted for gas</h5>
+            <p>Every year, utilities are asked to report the amount of gas that was "lost or unaccounted for" in their distribution system. The government and utilities concede some of this is because of leaks, but say it can also be issues with measurements, instrumentation and other factors. National average: 2.2%</p>
+          </div>
+          <div class="data-popover" data-id="4">
+            <div class="popover-close-button"></div>
+            <h5 class="popover-title">Hazardous leaks per 1,000 miles of main</h5>
+            <p>Gas utilities must report each year the number of leaks and hazardous leaks, the latter of which are leaks that posed a threat to people or property. This figure is the number of hazardous leaks from gas mains reported in 2013 per 1,000 miles of pipe. National average: 35 hazardous leaks per 1,000 miles.</p>
+          </div>
+        </div>
+    </div>
+    <div class="mobile-footer">
+      <a href="http://www.usatoday.com/longform/news/nation/2014/09/23/gas-pipes-cast-iron-deaths-explosions-investigation/15783697/" target="_blank" class="mobile-footer-link">See main story</a>
+    </div>
+  </div>
+
+  <script src="js/mobile.min.js"></script>
+</body>
+</html>

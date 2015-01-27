@@ -1,0 +1,194 @@
+/* Audio Controller Styles
+   ========================================================================== */
+
+.audio-bar {
+  background: $blue;
+  bottom: 0;
+  // border-radius: 3%/70%;
+  // margin: 6px 0 7px 0;
+  position: absolute;
+  top:0;
+  width: 0%;
+  height: 65px;
+
+}
+
+.audio-dot-container {
+  // left: -4.4%;
+  position: relative;
+  top: -15px;
+  width: 100%;
+}
+
+.audio-box {
+  background-color: rgba(255, 255, 255, 0.25);
+  display: table;
+  height: 65px;
+  float: left;
+  min-width: 120px;
+  position: relative;
+  width: 355px;
+  &:hover {
+    cursor: pointer;
+  }
+  @media (max-width: 1500px) {
+    width: 205px;
+  }
+}
+
+.audio-dot {
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  height: 15px;
+  left: 0%;
+  position: absolute;
+  top: 0px;
+  width: 15px;
+}
+
+.audio-player {
+  background: rgba(255, 255, 255, 0.5);
+  float: left;
+  min-width: 180px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+
+.audio-text {
+  display: table-cell;
+  text-transform: uppercase;
+  vertical-align: top;
+  width: 25%;
+}
+
+.audio-container {
+  top: 0px;
+  display: table;
+  float: right;
+  left: 8%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  top: -100px;
+  width: 100%;
+  z-index: 5;
+}
+
+.audio-inner{
+  // background: rgba(0, 0, 0, 0.5);
+  // box-shadow: $shadow-standard;
+  height: 50px;
+  // padding: 0 20px;
+  position: relative;
+  left: 0;
+-webkit-transition:all .3s ease;
+   -moz-transition:all .3s ease;
+     -o-transition:all .3s ease;
+        transition:all .3s ease;
+}
+
+.audio-inner.not-playing{
+left:-120%;
+-webkit-transition:all .3s ease;
+   -moz-transition:all .3s ease;
+     -o-transition:all .3s ease;
+        transition:all .3s ease;
+}
+
+
+.audio-play-pause-button {
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  position: relative;
+  text-transform: uppercase;
+  top: 10px;
+  width: 50%;
+  z-index: 2;
+}
+
+.audio-time-text {
+  display: inline-block;
+  float: left;
+  font-size: 1.2em;
+  margin-left: 15px;
+  position: absolute;
+  right: 2em;
+  text-align: left;
+  text-transform: uppercase;
+  top: 20px;
+  // width: 50px;
+  z-index: 2;
+}
+
+
+.play-pause {
+
+  height: 30px;
+  width: 30px;
+  position: relative;
+  margin: 17.5px auto;
+  &.play { background: url(../img/play.svg) no-repeat 100%;}
+  &.pause { background: url(../img/pause.svg) no-repeat 100%;}
+  &:hover { cursor: pointer;}
+  @media (max-width: 1500px) {
+    // height: 30px;
+    // margin-right: 5px;
+    // width: 30px;
+    // top: -15px;
+  }
+}
+
+.audio-forward {
+  
+  height: 30px;
+  width: 30px;
+  margin: 17.5px auto;
+  background: url(../img/forward.svg) no-repeat 100%;
+  @media (max-width: 1500px) {
+    
+  }
+}
+
+.audio-back{
+  margin: 17.5px auto;
+   height: 30px;
+  width: 30px;
+  top: -15px;
+  background: url(../img/back.svg) no-repeat 100%;
+  @media (max-width: 1500px) {
+    
+  }
+}
+
+.audio-button {
+  display: inline-block;
+  background: lighten($blue, 10);
+  float: left;
+  height: 65px;
+   width: 65px;
+   &:hover {
+    background-color: $blue;
+    cursor: pointer;
+   }
+   &.play {
+    background-color: $blue;
+    &:hover {
+      background-color: darken($blue, 10);
+    }
+   }
+}
+
+.audio-credit-inner {
+  display: none;
+  font-family: "Futura Today Light", Arial,sans-serif;
+  margin-bottom: 5px;
+  margin-left: 145px;
+  @media (max-width: 1500px) {
+    margin-left: 95px;
+  }
+}

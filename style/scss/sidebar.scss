@@ -1,0 +1,51 @@
+$panel-size: 350px;
+
+.sidebar {
+  background: $dark-grey;
+  bottom: 0;
+
+  color: $light-grey;
+  font-family: "Futura Today", Arial,sans-serif;
+  min-height: 100%;
+  padding: 8em 2em 0 2em;
+  position: absolute;
+  right: -$panel-size;
+  top: 0;
+  width: $panel-size;
+  transition: right 250ms ease;
+}
+
+.sidebar-active .sidebar{
+  box-shadow: $shadow-standard;
+  right: 0;
+  transition: right 250ms ease;
+  z-index: 10;
+}
+
+.sidebar-active .wrap {
+  left: -$panel-size;
+  transition: left 250ms ease;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-item {
+  
+  font-size: 1.4em;
+  margin-bottom: 0.25em;
+  text-transform: uppercase;
+  &.active {
+    color: $blue;
+  }
+  &:hover {
+    color: $blue;
+    cursor: pointer;
+  }
+}
+
+.nav-header {
+  text-transform: uppercase;
+}

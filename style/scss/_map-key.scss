@@ -1,0 +1,56 @@
+.map-key{
+  background-color: rgba(255, 255, 255, 0.9);
+  bottom: 30px;
+  box-shadow: $shadow-standard;
+  font-family: "Futura Today Light", Arial, sans-serif;
+  font-size: 0.8em;
+  padding: 1em;
+  position: absolute;
+  right: 70px;
+  width: 200px;
+  z-index: 200;
+  @extend .group;
+}
+
+.key-item {
+  display: inline-block;
+  
+  float: left;
+  text-align: center;
+  text-transform: uppercase;
+  width: 33%;
+}
+
+.key-icon {
+  border-radius: 50%;
+  height: 15px;
+  margin: 0 auto .5em auto;
+  width: 15px;
+  &.injuries {
+    background: $blue;
+    border: solid 2px lighten($blue, 20);
+  }
+  &.deaths {
+    background: black;
+    border: solid 2px lighten(black, 20);
+    
+  }
+  &.incidents {
+    background: lighten($light-grey, 20);
+    border: solid 2px lighten($medium-grey, 20);
+  }
+}
+
+.key-title{
+  margin: 0 0 .5em 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%
+}
+
+.key-footnote {
+  color: $medium-grey;
+  font-size: 0.9em;
+  margin-top: 0.5em;
+  text-align: center;
+}
