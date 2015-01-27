@@ -34,6 +34,8 @@ app.init = function() {
   new L.Control.Zoom({ position: 'bottomright' }).addTo(app.map);
 
 
+ app.baseURL = "http://www.gannett-cdn.com/experiments/usatoday/2014/gas-leaks/";
+
   app.markerLayer = L.mapbox.featureLayer(null).addTo(app.map);
   app.geocoder = L.mapbox.geocoder('mapbox.places');
   app.geocoderAll = L.mapbox.geocoder('mapbox.places');
