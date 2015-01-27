@@ -1147,11 +1147,22 @@ console.log(data);
 function callback(err, data) {
 
     console.log(data);
+
+    var stateFeature = _.find(data.features, function(feature) {
+      return feature.id.substring(0, 6) == "region";
+    });
+
+    var placeFeature = _.find(data.features, function(feature) {
+      return feature.id.substring(0, 5) == "place";
+    });
+
+
+
     
-    app.userStateReadable = data.features[3].text;
-    app.userState = data.features[3].text.toLowerCase();
+    app.userStateReadable = stateFeature.text;
+    app.userState = stateFeature.text.toLowerCase();
     app.userState = app.userState.replace(/\s+/g, '');
-    app.userPlace = data.features[1].text + ", " + data.features[3].text;
+    app.userPlace = placeFeature.text + ", " + stateFeature.text;
 
 
     app.setBeat(2);
