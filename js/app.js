@@ -1145,11 +1145,13 @@ app.setLocation = function(err, data) {
 console.log(data);
 
 function callback(err, data) {
+
+    console.log(data);
     
-    app.userStateReadable = data.features[2].text;
-    app.userState = data.features[2].text.toLowerCase();
+    app.userStateReadable = data.features[3].text;
+    app.userState = data.features[3].text.toLowerCase();
     app.userState = app.userState.replace(/\s+/g, '');
-    app.userPlace = data.features[0].text + ", " + data.features[2].text;
+    app.userPlace = data.features[1].text + ", " + data.features[3].text;
 
 
     app.setBeat(2);
