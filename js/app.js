@@ -1145,11 +1145,13 @@ app.setLocation = function(err, data) {
 console.log(data);
 
 function callback(err, data) {
+
+    console.log(data);
     
-    app.userStateReadable = data.features[2].text;
-    app.userState = data.features[2].text.toLowerCase();
+    app.userStateReadable = data.features[3].text;
+    app.userState = data.features[3].text.toLowerCase();
     app.userState = app.userState.replace(/\s+/g, '');
-    app.userPlace = data.features[0].text + ", " + data.features[2].text;
+    app.userPlace = data.features[1].text + ", " + data.features[3].text;
 
 
     app.setBeat(2);
@@ -1202,13 +1204,13 @@ app.zipSubmit = function(e) {
 };
 
 app.setAudio = function(fileName, intAudio) {
-  var html ='<source src="audio/' + fileName + '.mp3" type="audio/mpeg"><source src="audio/' + fileName + '.ogg" type="audio/ogg">';
+  var html ='<source src="' + app.baseURL + 'audio/' + fileName + '.mp3" type="audio/mpeg"><source src="audio/' + fileName + '.ogg" type="audio/ogg">';
   var arrSources = app.arrAudios.eq(intAudio).find("source");
   jQuery.each(arrSources, function(sourceIndex) {
     if (sourceIndex === 0) {
-      arrSources.eq(sourceIndex).attr({"src": "audio/" + fileName + ".mp3", "type": "audio/mpeg"}).detach().appendTo(app.arrAudios.eq(intAudio));
+      arrSources.eq(sourceIndex).attr({"src": app.baseURL + "audio/" + fileName + ".mp3", "type": "audio/mpeg"}).detach().appendTo(app.arrAudios.eq(intAudio));
     } else {
-      arrSources.eq(sourceIndex).attr({"src": "audio/" + fileName + ".ogg", "type": "audio/ogg"}).detach().appendTo(app.arrAudios.eq(intAudio));           
+      arrSources.eq(sourceIndex).attr({"src": app.baseURL + "audio/" + fileName + ".ogg", "type": "audio/ogg"}).detach().appendTo(app.arrAudios.eq(intAudio));           
     }
   });
     app.arrAudios[intAudio].load();
