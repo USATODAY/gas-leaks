@@ -1142,7 +1142,7 @@ app.startAudio = function(id) {
 };
 
 app.setLocation = function(err, data) {
-console.log(data);
+
 
 function callback(err, data) {
 
