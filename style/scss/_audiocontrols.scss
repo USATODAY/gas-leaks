@@ -132,8 +132,8 @@ left:-120%;
   width: 30px;
   position: relative;
   margin: 17.5px auto;
-  &.play { background: url(../img/play.svg) no-repeat 100%;}
-  &.pause { background: url(../img/pause.svg) no-repeat 100%;}
+  &.play { background: url(http://www.gannett-cdn.com/experiments/usatoday/2014/gas-leaks/img/play.svg) no-repeat 100%;}
+  &.pause { background: url(http://www.gannett-cdn.com/experiments/usatoday/2014/gas-leaks/img/pause.svg) no-repeat 100%;}
   &:hover { cursor: pointer;}
   @media (max-width: 1500px) {
     // height: 30px;
@@ -148,7 +148,7 @@ left:-120%;
   height: 30px;
   width: 30px;
   margin: 17.5px auto;
-  background: url(../img/forward.svg) no-repeat 100%;
+  background: url(http://www.gannett-cdn.com/experiments/usatoday/2014/gas-leaks/img/forward.svg) no-repeat 100%;
   @media (max-width: 1500px) {
     
   }
@@ -159,7 +159,7 @@ left:-120%;
    height: 30px;
   width: 30px;
   top: -15px;
-  background: url(../img/back.svg) no-repeat 100%;
+  background: url(http://www.gannett-cdn.com/experiments/usatoday/2014/gas-leaks/img/back.svg) no-repeat 100%;
   @media (max-width: 1500px) {
     
   }
